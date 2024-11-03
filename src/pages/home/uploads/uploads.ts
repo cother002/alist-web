@@ -2,6 +2,7 @@ import { objStore } from "~/store"
 import { FormUpload } from "./form"
 import { StreamUpload } from "./stream"
 import { Upload } from "./types"
+import { SegmentUpload } from "./segment"
 
 type Uploader = {
   upload: Upload
@@ -19,6 +20,12 @@ const AllUploads: Uploader[] = [
     name: "Form",
     upload: FormUpload,
     provider: /.*/,
+  },
+  // TODO: 分片上传
+  {
+  name: "Segment",
+  upload: SegmentUpload,
+  provider: /.*/,
   },
 ]
 
